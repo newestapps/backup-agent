@@ -23,7 +23,7 @@ This will create a user called `nw-backup` and his home folder is */home/nw-back
 
 To create backup strategies, just go to the directory `/home/nw-backup/groups`, and create a new folder with the desired name (everything inside this directory will be in the final backup file in your s3 storage), it'll be used for all backup process, including the database name ( see in *Configuration* section, to learn how to change the database name for dump, and other configs )
 
-    *Note:* You can create symbolic links to your files and directories in your server, the final backup will get all this real files (not only the symlink)
+ *Note:* You can create symbolic links to your files and directories in your server, the final backup will get all this real files (not only the symlink)
 
 ## Mysql Configuration
 
@@ -41,7 +41,7 @@ This statements will create a user called `nw_backup` with limited access via *l
 
 For each group, you can provide some different configs, like, other database name for a group. To do this, follow the steps:
 
-1. Create a new file inside your group directory (like /home/nw-backup/groups/myGroup), called `config.nw`
+1. Create a new file inside your group directory (like /home/nw-backup/groups/myGroup), called `config.nw` (this file will be ignored in your final backup file)
 2. Open the editor of your preference and add the desired specific config (like variables.  ex.  "NAME=VALUE")
 
 Currently, are only available this configs for individual groups:
