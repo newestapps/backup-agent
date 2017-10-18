@@ -2,7 +2,7 @@
 if [ ! -d "/home/nw-backup" ]
 then
 	echo -e "\033[1m Creating working user... (please provide sudo access)\e[0m"
-	sudo adduser nw-backup
+	sudo useradd nw-backup
 	sudo mkdir /home/nw-backup
 	sudo chown nw-backup:nw-backup /home/nw-backup
 	sudo chmod 777 /home/nw-backup
